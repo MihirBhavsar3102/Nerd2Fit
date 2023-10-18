@@ -1,0 +1,21 @@
+function calculatePace(distance, time) {
+  // Convert distance to kilometers
+  const distanceInKilometers = distance / 1000;
+
+  // Convert time to minutes
+  const timeInMinutes = time / 60;
+
+  // Calculate pace in minutes per kilometer
+  const paceInMinutesPerKilometer = timeInMinutes / distanceInKilometers;
+
+  // Return pace in minutes per kilometer
+  return paceInMinutesPerKilometer;
+}
+
+// Example usage:
+const distance = 5000; // meters
+const time = 3000; // seconds
+
+const pace = calculatePace(distance, time);
+
+console.log(`Pace: ${pace} min/km`);

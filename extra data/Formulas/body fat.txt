@@ -1,0 +1,27 @@
+function calculateBodyFat(neck, waist, hip, height, gender) {
+  // Calculate body fat percentage using the Navy Body Fat Calculator
+  let bodyFatPercentage;
+  if (gender === "male") {
+    bodyFatPercentage =
+      86.01 * (Math.log(waist - neck) / Math.log(10)) - 70.04 * (Math.log(height) / Math.log(10)) + 36.76;
+  } else if (gender === "female") {
+    bodyFatPercentage =
+      72.7 * (Math.log(waist - hip) / Math.log(10)) - 57.81 * (Math.log(height) / Math.log(10)) + 44.88;
+  } else {
+    throw new Error("Invalid gender: " + gender);
+  }
+
+  // Return body fat percentage
+  return bodyFatPercentage;
+}
+
+// Example usage:
+const neck = 38; // cm
+const waist = 80; // cm
+const hip = 95; // cm
+const height = 175; // cm
+const gender = "male";
+
+const bodyFatPercentage = calculateBodyFat(neck, waist, hip, height, gender);
+
+console.log(`Body fat percentage: ${bodyFatPercentage}%`);

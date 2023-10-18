@@ -1,0 +1,30 @@
+function calculateMacros(weight, height, age, gender, activityLevel) {
+  // Calculate BMR
+  const bmr = calculateBMR(height, weight, age, gender);
+
+  // Calculate TDEE
+  const tdee = bmr * activityLevel;
+
+  // Calculate macros
+  const protein = tdee * 0.2;
+  const carbs = tdee * 0.4;
+  const fat = tdee * 0.4;
+
+  // Return macros
+  return {
+    protein,
+    carbs,
+    fat,
+  };
+}
+
+// Example usage:
+const weight = 70; // kg
+const height = 175; // cm
+const age = 30; // years
+const gender = "male";
+const activityLevel = 1.55; // moderately active
+
+const macros = calculateMacros(weight, height, age, gender, activityLevel);
+
+console.log(`Macros: ${macros.protein}g protein, ${macros.carbs}g carbs, ${macros.fat}g fat`);

@@ -1,0 +1,27 @@
+function calculateBMR(height, weight, age, gender) {
+  // Convert height to meters
+  const heightInMeters = height / 100;
+
+  // Calculate BMR using the Mifflin-St Jeor equation
+  let bmr;
+  if (gender === "male") {
+    bmr = 10 * weight + 6.25 * heightInMeters - 5 * age + 5;
+  } else if (gender === "female") {
+    bmr = 10 * weight + 6.25 * heightInMeters - 5 * age - 161;
+  } else {
+    throw new Error("Invalid gender: " + gender);
+  }
+
+  // Return BMR
+  return bmr;
+}
+
+// Example usage:
+const height = 175; // cm
+const weight = 70; // kg
+const age = 30; // years
+const gender = "male";
+
+const bmr = calculateBMR(height, weight, age, gender);
+
+console.log(`BMR: ${bmr} kcal/day`);

@@ -1,0 +1,25 @@
+function calculateIdealWeight(height, gender) {
+  // Convert height to meters
+  const heightInMeters = height / 100;
+
+  // Calculate ideal weight
+  let idealWeight;
+  if (gender === "male") {
+    idealWeight = 50 + 2.3 * (heightInMeters - 152.4);
+  } else if (gender === "female") {
+    idealWeight = 45.5 + 2.3 * (heightInMeters - 152.4);
+  } else {
+    throw new Error("Invalid gender: " + gender);
+  }
+
+  // Return ideal weight
+  return idealWeight;
+}
+
+// Example usage:
+const height = 175; // cm
+const gender = "male";
+
+const idealWeight = calculateIdealWeight(height, gender);
+
+console.log(`Ideal weight: ${idealWeight} kg`);

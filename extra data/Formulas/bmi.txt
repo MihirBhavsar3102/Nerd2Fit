@@ -1,0 +1,19 @@
+function calculateBMI(height, weight, age) {
+  // Convert height to meters
+  const heightInMeters = height / 100;
+
+  // Calculate BMI
+  const bmi = weight / (heightInMeters * heightInMeters);
+
+  // Return BMI
+  return bmi;
+}
+
+// Example usage:
+const height = 175; // cm
+const weight = 70; // kg
+const age = 30; // years
+
+const bmi = calculateBMI(height, weight, age);
+
+console.log(`BMI: ${bmi}`);
