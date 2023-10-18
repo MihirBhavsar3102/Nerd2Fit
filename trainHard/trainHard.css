@@ -3,8 +3,8 @@
   background: #eee;
   width: 320px;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  /* border-radius: 5px;
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5); */
   overflow: hidden;
   border-top: 0.75rem solid #00bcd4;
 }
@@ -173,10 +173,10 @@
   fill: #00bcd4 !important;
 }
 
-html {
+/* html {
   background: #333;
   background: linear-gradient(25deg, #111, #555);
-}
+} */
 
 body {
   font-family: Roboto;
