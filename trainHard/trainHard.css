@@ -12,7 +12,7 @@
 .muscle-groups svg g g[id]:hover path {
   cursor: pointer;
   opacity: 0.8;
-  fill: #8b0000 !important;
+  fill: #ff0000 !important;
 }
 .muscle-groups .muscles-helper {
   display: none;
