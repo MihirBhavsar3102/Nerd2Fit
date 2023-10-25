@@ -12,7 +12,7 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0 0 50px white;
+  box-shadow: 0 0 50px rgb(255, 0, 0);
 }
 
 .navbar-icon {
