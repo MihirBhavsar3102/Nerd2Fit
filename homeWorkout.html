@@ -1,85 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Workout</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-        </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="navBar.css" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-</head>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <style>
+      .button {
+        /* background-color: red; */
+        /* color: #fffffe; */
+        border: none;
+        font-size: 14px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition-duration: 0.5s;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: rgb(255, 0, 0); /* Green */
+        color: rgb(255, 255, 255);
+        transform: scale(1.1);
+      }
+      .modal {
+        display: none;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
 
-<body style="background-image: url(/images/carbon\ fiber\ background.jpg);">
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /* text-align: center; */
+        position: relative;
+      }
 
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body style="background-image: url(/images/carbon\ fiber\ background.jpg)">
     <nav class="navbar">
-        <div class="navbar-icon">
-            <img src="images/logo.png" alt="Responsive Icon" />
-        </div>
-        <div class="navbar-heading">
-            <h1>HomeWorkout</h1>
-        </div>
-        <!-- <div class="navbar-icon">
+      <div class="navbar-icon">
+        <img src="images/logo.png" alt="Responsive Icon" />
+      </div>
+      <div class="navbar-heading">
+        <h1>HomeWorkout</h1>
+      </div>
+      <!-- <div class="navbar-icon">
             <i class="fas fa-arrow-right"></i>
         </div> -->
     </nav>
 
     <div class="container mt-5">
-        <div class="row" style="margin-top: 150px;">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/with dumble.jpg" class="card-img-top" alt="Card Image 1">
-                    <div class="card-body">
-                        <h5 class="card-title">With Dumble</h5>
-                        <div class="container mt-2">
-                            <ul>
-                                <li>Fat Loss</li>
-                                <li>Muscle Build</li>
-                            </ul>
-                        </div>
-                    </div>
+      <div class="row" style="margin-top: 150px">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="images/with dumble.jpg"
+              class="card-img-top"
+              alt="Card Image 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="font-weight: 800">
+                <center>With Dumble</center>
+              </h5>
+              <div class="container mt-2">
+                <center>
+                  <button id="fatLoss" class="button">Fat Loss</button>
+                </center>
+                <div id="detailBox" class="modal">
+                  <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <p>List of exercises:
+                        <ul>
+                            <li>Dumbbell squat</li>
+                            <li>Dumbbell overhead press</li>
+                            <li>Reverse lunge</li>
+                            <li>Front squat</li>
+                            <li>Plank Jacks</li>
+                            <li>Bent over row</li>
+                            <li>Biceps curl</li>
+                            <li>Hammer curl</li>
+                            <li>Dumbbell flys</li>
+                        </ul>
+                    </p>
+                  </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/without dumble.jpg" class="card-img-top" alt="Card Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Without Dumble</h5>
-                        <div class="container mt-2">
-                            <ul>
-                                <li>Fat Loss</li>
-                                <li>Muscle Build</li>
-                            </ul>
-                        </div>
+                <br />
+                <center>
+                  <button id="muscleBuild" class="button">Muscle Build</button>
+                </center>
+                <div id="detailBox" class="modal">
+                    <div class="modal-content">
+                      <span class="close" id="closeModal">&times;</span>
+                      <p>List of exercises:
+                          <ul>
+                              <li>Chest press: 3–6 sets of 4–8 reps</li>
+                              <li>Lying dumbbell fly: 3–6 sets of 4–8 reps</li>
+                              <li>Pullover: 3 sets of 10–12 reps</li>
+                          </ul>
+                      </p>
                     </div>
-                </div>
+                  </div>
+                <br />
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="images/stretching.jpg" class="card-img-top" alt="Card Image 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Stretching</h5>
-                        <div class="container mt-2">
-                            <br><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="images/without dumble.jpg"
+              class="card-img-top"
+              alt="Card Image 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="font-weight: 800">
+                <center>Without Dumble</center>
+              </h5>
+              <div class="container mt-2">
+                <center>
+                  <button id="openModal" class="button">Fat Loss</button>
+                </center>
+                <!-- <div id="detailBox" class="modal">
+                    <div class="modal-content">
+                      <span class="close" id="closeModal">&times;</span>
+                      <p>List of exercises:
+                          <ul>
+                              <li>Jumping Jacks</li>
+                              <li>Burpees</li>
+                              <li>Squat Jumps</li>
+                              <li>Skater Jumps</li>
+                              <li>Plank Jacks</li>
+                              <li>High Knees</li>
+                          </ul>
+                      </p>
+                    </div>
+                  </div> -->
+                <br />
+                <center>
+                  <button id="openModal" class="button">Muscle Build</button>
+                </center>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="images/stretching.jpg"
+              class="card-img-top"
+              alt="Card Image 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="font-weight: 800">
+                <center>Stretching</center>
+                <br />
+              </h5>
+              <div class="container mt-2">
+                <center>
+                  <button id="openModal" class="button">Click Here</button>
+                </center>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
+  <script>
+    // Get references to the modal and button elements
+    var modal = document.getElementById("detailBox");
+    var openModalBtn1 = document.getElementById("fatLoss");
+    var openModalBtn2 = document.getElementById("muscleBuild");
+    var closeModalBtn = document.getElementById("closeModal");
 
+    // Function to open the modal
+    openModalBtn1.addEventListener("click", function () {
+      modal.style.display = "block";
+    });
+
+    openModalBtn2.addEventListener("click", function () {
+      modal.style.display = "block";
+    });
+
+    // Function to close the modal
+    closeModalBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </html>

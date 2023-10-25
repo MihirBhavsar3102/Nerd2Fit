@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* CSS for the modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+      }
+
+      .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      /* Additional styles can be added as needed */
+    </style>
+  </head>
+  <body>
+    <button id="openModal">Open Detail Box</button>
+
+    <div id="detailBox" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Detail Box</h2>
+        <p>This is the content of the detail box.</p>
+      </div>
+    </div>
+
+    <script>
+      // Get references to the modal and button elements
+      var modal = document.getElementById("detailBox");
+      var openModalBtn = document.getElementById("openModal");
+      var closeModalBtn = document.getElementById("closeModal");
+
+      // Function to open the modal
+      openModalBtn.addEventListener("click", function () {
+        modal.style.display = "block";
+      });
+
+      // Function to close the modal
+      closeModalBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      // Close the modal if the user clicks outside of it
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
